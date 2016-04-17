@@ -10,9 +10,8 @@ type ListNode struct {
 func reversePart(head *ListNode, end *ListNode) *ListNode {
 	var p *ListNode
 	c := head
-	n := c
 	for c != end {
-		n = n.Next
+		n := c.Next
 		c.Next = p
 		p = c
 		c = n
